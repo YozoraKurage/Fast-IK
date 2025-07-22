@@ -1,0 +1,15 @@
+{
+	"name" : "net.yozolab.fast-ik",
+	"displayName" : "Fast IK Fork For UPM",
+	"version" : "0.1.0",
+	"unity" : "2022.3",
+	"description" : "",
+	"author" : {
+		"name" : "YozoraKurage",
+		"email" : "YozoraKurage@yozolab.net",
+		"url" : "https://www.yozolab.net"
+	},
+	"dependencies" : {
+	},
+	"samples" : []
+}
