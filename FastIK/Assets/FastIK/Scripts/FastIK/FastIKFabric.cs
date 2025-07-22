@@ -1,6 +1,6 @@
 ﻿#if UNITY_EDITOR
+
 using UnityEditor;
-#endif
 using UnityEngine;
 
 namespace DitzelGames.FastIK
@@ -248,9 +248,9 @@ namespace DitzelGames.FastIK
                 Handles.color = Color.green;
                 Handles.DrawWireCube(Vector3.up * 0.5f, Vector3.one);
             }
-
-        }
 #endif
-
+        }
     }
 }
+
+#endif

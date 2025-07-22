@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿#if UNITY_EDITOR
+
+using UnityEngine;
 
 namespace DitzelGames.FastIK
 {
@@ -38,3 +40,5 @@ namespace DitzelGames.FastIK
         }
     }
 }
+
+#endif
