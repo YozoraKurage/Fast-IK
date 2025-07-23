@@ -224,33 +224,33 @@ namespace DitzelGames.FastIK
                 current.rotation = Root.rotation * rotation;
         }
 
-        void OnDrawGizmos()
-        {
-#if UNITY_EDITOR
-            if (!this.enabled) return;
-            var current = this.transform;
-            Vector3 origin = Root.position;
-            for (int i = 0; i < Positions.Length - 1; i++)
-            {
-                Vector3 currentPoint = origin + (Vector3)(Root.localToWorldMatrix * Positions[i]);
-                Vector3 nextPoint    = origin + (Vector3)(Root.localToWorldMatrix * Positions[i + 1]);
+//         void OnDrawGizmos()
+//         {
+// #if UNITY_EDITOR
+//             if (!this.enabled) return;
+//             var current = this.transform;
+//             Vector3 origin = Root.position;
+//             for (int i = 0; i < Positions.Length - 1; i++)
+//             {
+//                 Vector3 currentPoint = origin + (Vector3)(Root.localToWorldMatrix * Positions[i]);
+//                 Vector3 nextPoint    = origin + (Vector3)(Root.localToWorldMatrix * Positions[i + 1]);
 
-                float dist = Vector3.Distance(currentPoint, nextPoint);
-                float scale = dist * 0.1f;
-                var rot = Quaternion.FromToRotation(
-                    Vector3.up,
-                    nextPoint - currentPoint
-                );
-                Handles.matrix = Matrix4x4.TRS(
-                    currentPoint,
-                    rot,
-                    new Vector3(scale, dist, scale)
-                );
-                Handles.color = Color.green;
-                Handles.DrawWireCube(Vector3.up * 0.5f, Vector3.one);
-            }
-#endif
-        }
+//                 float dist = Vector3.Distance(currentPoint, nextPoint);
+//                 float scale = dist * 0.1f;
+//                 var rot = Quaternion.FromToRotation(
+//                     Vector3.up,
+//                     nextPoint - currentPoint
+//                 );
+//                 Handles.matrix = Matrix4x4.TRS(
+//                     currentPoint,
+//                     rot,
+//                     new Vector3(scale, dist, scale)
+//                 );
+//                 Handles.color = Color.green;
+//                 Handles.DrawWireCube(Vector3.up * 0.5f, Vector3.one);
+//             }
+// #endif
+//         }
     }
 }
 
