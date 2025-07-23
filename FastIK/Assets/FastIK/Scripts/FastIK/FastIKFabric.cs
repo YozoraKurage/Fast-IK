@@ -17,11 +17,6 @@ namespace DitzelGames.FastIK
         public int ChainLength = 2;
 
         /// <summary>
-        /// OnDrawGizmosの描画可否
-        /// </summary>
-        public bool EnableGizmos = true;
-
-        /// <summary>
         /// Target the chain should bent to
         /// </summary>
         public Transform Target;
@@ -232,7 +227,7 @@ namespace DitzelGames.FastIK
         void OnDrawGizmos()
         {
 #if UNITY_EDITOR
-            if (!EnableGizmos) return;
+            if (!this.enabled) return;
             var current = this.transform;
             Vector3 origin = Root.position;
             for (int i = 0; i < Positions.Length - 1; i++)
